@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// uncomment to run working bindings imported to js
 // import App from './js/App';
+// uncomment to run binding in Demo.re
 import {app as App} from './re/Demo.bs';
 import * as serviceWorker from './serviceWorker';
 
