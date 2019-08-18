@@ -1,5 +1,5 @@
-[%raw "require('./App.css')"];
-let logo = [%raw "require('./logo.svg')"];
+[%raw "require('../App.css')"];
+let logo = [%raw "require('../logo.svg')"];
 [@react.component]
 let make = () => {
   <div className="App">

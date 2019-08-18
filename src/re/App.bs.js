@@ -3,9 +3,9 @@
 
 var React = require("react");
 
-((require('./App.css')));
+((require('../App.css')));
 
-var logo = (require('./logo.svg'));
+var logo = (require('../logo.svg'));
 
 function App(Props) {
   return React.createElement("div", {

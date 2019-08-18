@@ -1,14 +1,8 @@
-// [@bs.deriving abstract]
-// type props = {
-//   [@bs.as "Comp"]
-//   comp: React.element,
-//   includeGreetings: bool,
-// };
 [@bs.deriving abstract]
 type props = {
   [@bs.as "Comp"]
   comp: React.element,
-  includeGreetings: bool,
+  [@bs.optional] includeGreetings: bool,
 };
 
 [@genType.import ("aws-amplify-react", "withAuthenticator")] [@react.component]
