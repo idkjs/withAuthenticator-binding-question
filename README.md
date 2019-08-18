@@ -92,3 +92,44 @@ exports.app = app;
 The binding is working when `App.re` is being passed to `WithAuthenticator.re` when used in `src/js/App.js`.
 
 It doesnt work when call directly in `src/re/Demo.re`. I am trying to understand why and how to fix it. Thanks.
+
+This is App is the demo from the AwsAmplify docs found here: <https://aws-amplify.github.io/docs/js/react.>
+
+Then add run `yarn add bs-platform -D` and `yarn add reason-react`.
+
+Then `touch bsconfig.json` and add following to it.
+
+```json
+{
+  "name": "react-hooks-template",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "gentypeconfig": {
+    "language": "untyped",
+    "module": "es6",
+    "importPath": "relative",
+    "reasonReactPath": "reason-react/src/ReasonReact.js",
+    "exportInterfaces": false,
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  },
+  "refmt": 3
+}
+```
